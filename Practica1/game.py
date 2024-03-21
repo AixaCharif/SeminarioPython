@@ -43,7 +43,7 @@ def difficultWord (secret_word, difficulty):
                 word.append(letter)
             else:
                 word.append("_")
-            index = index + 1
+            index += 1
     else:
             word = ["_"] * len(secret_word)
     return word
@@ -76,7 +76,7 @@ while (max_attempts != 0):
         print("¡Bien hecho! La letra está en la palabra.")
     else:
         print("Lo siento, la letra no está en la palabra.")
-        max_attempts = max_attempts - 1 
+        max_attempts -= 1 
         # Muestro palabra anterior ya que no hubo cambios y corto ejecución
         print(f"Palabra: {word_displayed}")
         continue
@@ -89,7 +89,7 @@ while (max_attempts != 0):
     for letter in secret_word:
         if letter in guessed_letters:
             letters[index] = letter
-        index = index + 1
+        index += 1
     
     # Mostrar la palabra parcialmente adivinada
     word_displayed = "".join(letters)
