@@ -7,8 +7,11 @@ words = ["python", "programación", "computadora", "código", "desarrollo",
 # Elegir una palabra al azar
 secret_word = random.choice(words)
 
-# Número máximo de intentos permitidos
+# Número máximo de fallos permitidos
 max_attempts = 10
+
+# Variable para mostrar cantidad de fallos al perder
+fails = max_attempts
 
 # Lista para almacenar las letras adivinadas
 guessed_letters = []
@@ -49,6 +52,7 @@ def difficultWord (secret_word, difficulty):
     return word
 
 print("Estoy pensando en una palabra. ¿Puedes adivinar cuál es?")
+print(f"Tienes un total de {max_attempts} oportunidades para cometer errores antes de perder")
 
 # Completo letters según dificultad seleccionada
 letters = difficultWord (secret_word,difficulty)
@@ -100,5 +104,5 @@ while (max_attempts != 0):
         print(f"¡Felicidades! Has adivinado la palabra secreta: {secret_word}")
         break
 else:
-    print(f"¡Oh no! Has agotado tus {max_attempts} intentos.")
+    print(f"¡Oh no! Has fallado {fails} veces.")
     print(f"La palabra secreta era: {secret_word}")
