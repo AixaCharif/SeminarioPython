@@ -1,6 +1,8 @@
-#Genera la nueva estructura con los datos de cada jugador
+#total_games es igual al total de partidos jugados en la temporada
 
 total_games = 25
+
+#Genera la nueva estructura con los datos de cada jugador
 
 def inciso_a ():
     names = "Agustin, Yanina, Andrés, Ariadna, Bautista, CAROLINA, CESAR, David, Diego, Dolores, DYLAN, ELIANA, Emanuel, Fabián, Noelia, Francsica, FEDERICO, Fernanda, GONZALO, Nancy"
@@ -34,7 +36,7 @@ def inciso_c (jugadores):
 
 
 
-#Saca el promedio de goles por partido del equipo completo con función sum
+#Calcula el promedio de goles por partido del equipo completo con función sum
 
 def inciso_d (jugadores):
     total_goals = sum(jugador["Goles a favor"] for jugador in jugadores)
@@ -42,7 +44,7 @@ def inciso_d (jugadores):
 
 
 
-#Saca promedio de goles por partido del maximo goleador/a
+#Calcula el promedio de goles por partido del maximo goleador/a
 
 def inciso_e (goals_max):
     return (goals_max / total_games)
